@@ -1,5 +1,5 @@
 # Voice Mob spawner
-A fun little script to spawn mobs with voice control by using local speech to text
+A fun little script to spawn mobs with voice control by using local speech to text(vosk)
 
 ## Installation
 ### Via releases
