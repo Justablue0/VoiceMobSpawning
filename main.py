@@ -53,8 +53,13 @@ def main():
 
     user = questionary.text("What is your mc username?",
                             validate=lambda text: True if text else "Please enter a username").ask()
+    host = questionary.text(
+        "This tool uses mcrcon so what is the host for the mcrcon connection?",
+        validate=lambda num: True if int(num).is_integer() else "Please enter a valid host",
+        default="localhost"
+    ).ask()
     port = questionary.text(
-        "This tool uses mcrcon so what is the port for the mcrcon?",
+        "This tool uses mcrcon so what is the port for the mcrcon connection?",
         validate=lambda num: True if int(num).is_integer() else "Please enter a valid port",
         default="25575"
     ).ask()
@@ -128,7 +133,7 @@ def main():
                     if matches:
                         mob_name = matches[0].replace(" ", "_").lower()
                         print("Matched Mob:", mob_name)
-                        mc_interface.summon(mob_name, selected_voice, username=user, password=password, port=port)
+                        mc_interface.summon(mob_name, selected_voice, username=user, password=password, port=port, host=host)
                         time.sleep(1)
 
 

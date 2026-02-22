@@ -10,8 +10,8 @@ def speak(text, voice):
     engine.runAndWait()
     engine.stop()
 
-def summon(mob, voice, username, password, port):
-    with MCRcon("localhost", "sekret", port=port) as mcr:
+def summon(mob, voice, username, password, port, host):
+    with MCRcon(host, "sekret", port=port) as mcr:
         rand = random.randint(1, 10)
         for i in range(rand):
             resp = mcr.command(f"/summon {mob} ~ ~ ~")
