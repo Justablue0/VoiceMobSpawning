@@ -4,6 +4,7 @@ A fun little script to spawn mobs with voice control by using local speech to te
 ## Installation
 ### Via releases
 Install it via the [releases](https://github.com/Justablue0/VoiceMobSpawning/releases/latest)(It is a portable file)
+as of now this is only for windows since linux and mac come with python
 
 ### Via python
 Download the project
